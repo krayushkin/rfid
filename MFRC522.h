@@ -72,8 +72,8 @@
  * 		Pages 42-43 Authentication configuration
  * 		Pages 44-47 Authentication key 
  */
-#ifndef MFRC522_c_h
-#define MFRC522_c_h
+#ifndef MFRC522_h
+#define MFRC522_h
 
 
 #include <stdint.h>
