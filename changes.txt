@@ -1,3 +1,11 @@
+18 Dec 2015
+- Port to C:
+
+	- add #include <stdint.h>
+	- add typedef uint8_t byte;
+	- rename MFRC522::StatusCode to StatusCode
+	- move private vars to MFRC522_c.c
+
 5 Dec 2015
 - recognize infineon cards correctly @mayatforest
 - added multi reader support, see example @lmmeng
