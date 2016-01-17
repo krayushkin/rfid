@@ -85,7 +85,8 @@ typedef uint8_t bool;
 
 #define PROGMEM // define to empty string
 
-
+#define _chipSelectPin 0
+#define _resetPowerDownPin 1
 
 #define LOW 0
 #define HIGH 1
@@ -296,7 +297,6 @@ typedef enum
 	// Functions for setting up the Arduino
 	/////////////////////////////////////////////////////////////////////////////////////
 	void MFRC522_1();
-	void MFRC522_2(byte chipSelectPin, byte resetPowerDownPin);
 	void setSPIConfig();
 	
 	/////////////////////////////////////////////////////////////////////////////////////

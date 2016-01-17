@@ -21,6 +21,6 @@ void Serial_print(__FlashStringHelper *str);
 void Serial_print2(byte value, SerialPrintFormat format);
 void Serial_println (__FlashStringHelper *str);
 void Serial_println1();
-
+void MFRC522_1();
 
 #endif

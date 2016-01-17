@@ -8,7 +8,7 @@
 
 
 #include <stdlib.h>
-#include <memory.h>
+#include <string.h>
 
 
 #include "MFRC522.h"
@@ -75,29 +75,13 @@ const byte FM17522_firmware_reference[] PROGMEM = {
 	// Size of the MFRC522 FIFO
 	static const byte FIFO_SIZE = 64;		// The FIFO is 64 bytes.
 
-byte _chipSelectPin;		// Arduino pin connected to MFRC522's SPI slave select input (Pin 24, NSS, active low)
-byte _resetPowerDownPin;	// Arduino pin connected to MFRC522's reset and power down input (Pin 6, NRSTPD, active low)
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Functions for setting up the Arduino
 /////////////////////////////////////////////////////////////////////////////////////
-/**
- * Constructor.
- */
-void MFRC522_1() {
-} // End constructor
 
-/**
- * Constructor.
- * Prepares the output pins.
- */
-void MFRC522_2(	byte chipSelectPin,		///< Arduino pin connected to MFRC522's SPI slave select input (Pin 24, NSS, active low)
-					byte resetPowerDownPin	///< Arduino pin connected to MFRC522's reset and power down input (Pin 6, NRSTPD, active low)
-				) {
-	_chipSelectPin = chipSelectPin;
-	_resetPowerDownPin = resetPowerDownPin;
-} // End constructor
 
 
 /////////////////////////////////////////////////////////////////////////////////////
