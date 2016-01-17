@@ -97,15 +97,6 @@ typedef uint8_t bool;
 
 // new enums
 
-typedef enum
-{
-	MSBFIRST
-} SPI_Bit_Order;
-
-typedef enum
-{
-	SPI_MODE0
-} SPI_Data_Mode;
 
 typedef enum
 {

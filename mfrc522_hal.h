@@ -10,8 +10,7 @@
 
 #include "MFRC522.h"
 
-void SPI_setBitOrder(SPI_Bit_Order order);
-void SPI_setDataMode(SPI_Data_Mode mode);
+void setSPIConfig(void);
 byte SPI_transfer(byte c);
 byte pgm_read_byte(const byte* addr);
 void digitalWrite(byte pin, byte value);

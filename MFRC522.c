@@ -99,14 +99,6 @@ void MFRC522_2(	byte chipSelectPin,		///< Arduino pin connected to MFRC522's SPI
 	_resetPowerDownPin = resetPowerDownPin;
 } // End constructor
 
-/**
- * Set SPI bus to work with MFRC522 chip.
- * Please call this function if you have changed the SPI config since the MFRC522 constructor was run.
- */
-void setSPIConfig() {
-	SPI_setBitOrder(MSBFIRST);
-	SPI_setDataMode(SPI_MODE0);
-} // End setSPIConfig()
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Basic interface functions for communicating with the MFRC522

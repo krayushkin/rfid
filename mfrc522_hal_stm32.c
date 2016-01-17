@@ -8,15 +8,16 @@
 #include "mfrc522_hal.h"
 #include <stdio.h>
 
-void SPI_setBitOrder(SPI_Bit_Order order)
-{
 
-}
+/**
+ * Set SPI bus to work with MFRC522 chip.
+ * Please call this function if you have changed the SPI config since the MFRC522 constructor was run.
+ */
+void setSPIConfig(void) {
+	// todo
+} // End setSPIConfig()
 
-void SPI_setDataMode(SPI_Data_Mode mode)
-{
 
-}
 
 byte SPI_transfer(byte c)
 {
