@@ -275,8 +275,8 @@ void PCD_Init1() {
 void PCD_Init2(	byte chipSelectPin,		///< Arduino pin connected to MFRC522's SPI slave select input (Pin 24, NSS, active low)
 						byte resetPowerDownPin	///< Arduino pin connected to MFRC522's reset and power down input (Pin 6, NRSTPD, active low)
 					) {
-	_chipSelectPin = chipSelectPin;
-	_resetPowerDownPin = resetPowerDownPin; 
+//	_chipSelectPin = chipSelectPin;
+//	_resetPowerDownPin = resetPowerDownPin;
 	// Set the chipSelectPin as digital output, do not select the slave yet
 	PCD_Init1();
 } // End PCD_Init()
