@@ -8,6 +8,7 @@
 #include "mfrc522_hal.h"
 #include <stdio.h>
 #include <stm32f1xx_hal.h>
+#include <Trace.h>
 
 
 static SPI_HandleTypeDef spih;
@@ -98,6 +99,20 @@ void MFRC522_1() {
 	spih.Init.NSS = SPI_NSS_SOFT;
 	spih.Init.TIMode = SPI_TIMODE_DISABLE;
 	HAL_SPI_Init(&spih);
+
+	GPIO_InitTypeDef spi_gpio;
+	spi_gpio.Pull = GPIO_NOPULL;
+	spi_gpio.Speed = GPIO_SPEED_MEDIUM;
+	spi_gpio.Pin = GPIO_PIN_5 | GPIO_PIN_7;
+	spi_gpio.Mode = GPIO_MODE_AF_PP;
+	HAL_GPIO_Init(GPIOA, &spi_gpio);
+
+	spi_gpio.Pin = GPIO_PIN_6;
+	spi_gpio.Mode = GPIO_MODE_AF_INPUT;
+	HAL_GPIO_Init(GPIOA, &spi_gpio);
+
+
+
 
 } // End constructor
 
